@@ -54,10 +54,18 @@ public class Fire_Power {
     public static final RegistryObject<Block> FIRE_ELEMENT_BLOCK;
     public static final RegistryObject<BlockItem> FIRE_ELEMENT_BLOCK_ITEM;
 
+    public static final String FIRE_ELEMENT_ORE_ID = "fire_element_ore";
+
+    public static final RegistryObject<Block> FIRE_ELEMENT_ORE;
+
+    public static final RegistryObject<BlockItem> FIRE_ELEMENT_ORE_ITEM;
+
     static {
         FIRE_ELEMENT_ITEM = ITEMS.register(FIRE_ELEMENT_ID, () -> new Item(new Item.Properties().tab(CreativeModeTab.TAB_REDSTONE)));
         FIRE_ELEMENT_BLOCK = BLOCKS.register(FIRE_ELEMENT_BLOCK_ID, () -> new Block(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops().strength(2F, 1.5F)));
         FIRE_ELEMENT_BLOCK_ITEM = ITEMS.register(FIRE_ELEMENT_BLOCK_ID, () -> new BlockItem(FIRE_ELEMENT_BLOCK.get(), new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS)));
+        FIRE_ELEMENT_ORE = BLOCKS.register(FIRE_ELEMENT_ORE_ID, () -> new Block(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops().strength(2F, 1.5F)));
+        FIRE_ELEMENT_ORE_ITEM = ITEMS.register(FIRE_ELEMENT_ORE_ID, () -> new BlockItem(FIRE_ELEMENT_ORE.get(), new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS)));
     }
 
     //public Fire_Power
@@ -97,6 +105,7 @@ public class Fire_Power {
             this.add("chat.message.welcome", "Have a nice day!");
             this.add(FIRE_ELEMENT_ITEM.get(), "Fire Element");
             this.add(FIRE_ELEMENT_BLOCK.get(), "Fire Element Block");
+            this.add(FIRE_ELEMENT_ORE.get(), "Fire Element Ore");
         }
     }
 
@@ -112,6 +121,7 @@ public class Fire_Power {
             this.add("chat.message.welcome", "欢迎回来，祝君好运，玩的开心！");
             this.add(FIRE_ELEMENT_ITEM.get(), "火元素");
             this.add(FIRE_ELEMENT_BLOCK.get(), "火元素块");
+            this.add(FIRE_ELEMENT_ORE.get(), "火元素矿石");
         }
     }
 
@@ -134,6 +144,8 @@ public class Fire_Power {
         protected void registerStatesAndModels() {
             this.simpleBlock(FIRE_ELEMENT_BLOCK.get(), this.cubeAll(FIRE_ELEMENT_BLOCK.get()));
             this.simpleBlockItem(FIRE_ELEMENT_BLOCK.get(), this.cubeAll(FIRE_ELEMENT_BLOCK.get()));
+            this.simpleBlock(FIRE_ELEMENT_ORE.get(), this.cubeAll(FIRE_ELEMENT_ORE.get()));
+            this.simpleBlockItem(FIRE_ELEMENT_ORE.get(), this.cubeAll(FIRE_ELEMENT_ORE.get()));
         }
     }
 
@@ -158,6 +170,7 @@ public class Fire_Power {
         @Override
         protected void addTables() {
             this.add(FIRE_ELEMENT_BLOCK.get(), block -> createSingleItemTableWithSilkTouch(block, FIRE_ELEMENT_ITEM.get(), ConstantValue.exactly(9f)));
+            this.add(FIRE_ELEMENT_ORE.get(), block -> createSingleItemTableWithSilkTouch(block, FIRE_ELEMENT_ITEM.get(), ConstantValue.exactly(2f)));
         }
 
         @Nonnull
