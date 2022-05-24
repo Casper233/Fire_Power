@@ -1,0 +1,7 @@
+d20e859911932215bda4a99b668e5541d81854c5 assets/fire_power/blockstates/fire_element_block.json
+e754c179d910f64ba6a2400445ff427a1b27b54d assets/fire_power/lang/en_us.json
+531a649e99a0786964a95fefdc7be8e34e8f17f5 assets/fire_power/lang/zh_cn.json
+53c9790b2f4bfa2c399a3d955493a239dd7b15d9 assets/fire_power/models/block/fire_element_block.json
+6511d92fca2655ab532e988ae45a6aeac8a78e89 assets/fire_power/models/item/fire_element.json
+b232492707df91212f3294ccd56807dd49f1faa6 assets/fire_power/models/item/fire_element_block.json
+707886059734d67223e4ec3bba93636390ee449e data/fire_power/loot_tables/blocks/fire_element_block.json
