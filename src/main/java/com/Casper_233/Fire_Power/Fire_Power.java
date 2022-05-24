@@ -62,9 +62,9 @@ public class Fire_Power {
 
     static {
         FIRE_ELEMENT_ITEM = ITEMS.register(FIRE_ELEMENT_ID, () -> new Item(new Item.Properties().tab(CreativeModeTab.TAB_REDSTONE)));
-        FIRE_ELEMENT_BLOCK = BLOCKS.register(FIRE_ELEMENT_BLOCK_ID, () -> new Block(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops().strength(2F, 1.5F)));
+        FIRE_ELEMENT_BLOCK = BLOCKS.register(FIRE_ELEMENT_BLOCK_ID, () -> new Block(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops().strength(2, 1.5F)));
         FIRE_ELEMENT_BLOCK_ITEM = ITEMS.register(FIRE_ELEMENT_BLOCK_ID, () -> new BlockItem(FIRE_ELEMENT_BLOCK.get(), new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS)));
-        FIRE_ELEMENT_ORE = BLOCKS.register(FIRE_ELEMENT_ORE_ID, () -> new Block(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops().strength(2F, 1.5F)));
+        FIRE_ELEMENT_ORE = BLOCKS.register(FIRE_ELEMENT_ORE_ID, () -> new Block(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops().strength(2, 1.5F)));
         FIRE_ELEMENT_ORE_ITEM = ITEMS.register(FIRE_ELEMENT_ORE_ID, () -> new BlockItem(FIRE_ELEMENT_ORE.get(), new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS)));
     }
 
