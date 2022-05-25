@@ -1,6 +1,11 @@
 {
   "block.fire_power.fire_element_block": "\u706B\u5143\u7D20\u5757",
   "block.fire_power.fire_element_ore": "\u706B\u5143\u7D20\u77FF\u77F3",
+  "block.fire_power.fire_ingot_block": "\u706B\u952D\u5757",
+  "block.fire_power.tai_ingot_block": "\u949B\u91D1\u5757",
   "chat.message.welcome": "\u6B22\u8FCE\u56DE\u6765\uFF0C\u795D\u541B\u597D\u8FD0\uFF0C\u73A9\u7684\u5F00\u5FC3\uFF01",
-  "item.fire_power.fire_element": "\u706B\u5143\u7D20"
+  "item.fire_power.fire_element": "\u706B\u5143\u7D20",
+  "item.fire_power.fire_ingot": "\u706B\u952D",
+  "item.fire_power.old_tai_ingot": "\u949B\u91D1\u952D\uFF08\u5DF2\u7ECF\u5E9F\u5F03\uFF09",
+  "item.fire_power.tai_ingot": "\u949B\u91D1\u952D"
 }

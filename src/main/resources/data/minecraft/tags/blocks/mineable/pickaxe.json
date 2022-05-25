@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values":[
+    "fire_power:fire_element_block",
+    "fire_power:fire_element_ore",
+    "fire_power:tai_ingo_block",
+    "fire_power:fire_ingot_block"
+  ]
+}

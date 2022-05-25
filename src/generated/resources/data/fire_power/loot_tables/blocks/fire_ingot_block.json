@@ -7,7 +7,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "fire_power:fire_element_ore"
+          "name": "fire_power:fire_ingot_block"
         }
       ],
       "conditions": [

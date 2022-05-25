@@ -1,5 +1,6 @@
 package com.Casper_233.Fire_Power;
 
+
 import com.google.common.collect.Iterables;
 import com.mojang.datafixers.util.Pair;
 
@@ -7,8 +8,10 @@ import net.minecraft.Util;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.loot.BlockLoot;
 import net.minecraft.data.loot.LootTableProvider;
+import net.minecraft.data.tags.BlockTagsProvider;
 import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.tags.Tag;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
@@ -50,9 +53,27 @@ public class Fire_Power {
     public static final String FIRE_ELEMENT_ID = "fire_element";
     public static final RegistryObject<Item> FIRE_ELEMENT_ITEM;
 
+    public static final String FIRE_INGOT_ID = "fire_ingot";
+    public static final RegistryObject<Item> FIRE_INGOT_ITEM;
+
+    public static final String TAI_INGOT_ID = "tai_ingot";
+    public static final RegistryObject<Item> TAI_INGOT_ITEM;
+
+    public static final String OLD_TAI_INGOT_ID = "old_tai_ingot";
+    public static final RegistryObject<Item> OLD_TAI_INGOT_ITEM;
+
+
     public static final String FIRE_ELEMENT_BLOCK_ID = "fire_element_block";
     public static final RegistryObject<Block> FIRE_ELEMENT_BLOCK;
     public static final RegistryObject<BlockItem> FIRE_ELEMENT_BLOCK_ITEM;
+
+    public static final String FIRE_INGOT_BLOCK_ID = "fire_ingot_block";
+    public static final RegistryObject<Block> FIRE_INGOT_BLOCK;
+    public static final RegistryObject<BlockItem> FIRE_INGOT_BLOCK_ITEM;
+
+    public static final String TAI_INGOT_BLOCK_ID = "tai_ingot_block";
+    public static final RegistryObject<Block> TAI_INGOT_BLOCK;
+    public static final RegistryObject<BlockItem> TAI_INGOT_BLOCK_ITEM;
 
     public static final String FIRE_ELEMENT_ORE_ID = "fire_element_ore";
 
@@ -60,12 +81,32 @@ public class Fire_Power {
 
     public static final RegistryObject<BlockItem> FIRE_ELEMENT_ORE_ITEM;
 
+
     static {
-        FIRE_ELEMENT_ITEM = ITEMS.register(FIRE_ELEMENT_ID, () -> new Item(new Item.Properties().tab(CreativeModeTab.TAB_REDSTONE)));
-        FIRE_ELEMENT_BLOCK = BLOCKS.register(FIRE_ELEMENT_BLOCK_ID, () -> new Block(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops().strength(2, 1.5F)));
-        FIRE_ELEMENT_BLOCK_ITEM = ITEMS.register(FIRE_ELEMENT_BLOCK_ID, () -> new BlockItem(FIRE_ELEMENT_BLOCK.get(), new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS)));
-        FIRE_ELEMENT_ORE = BLOCKS.register(FIRE_ELEMENT_ORE_ID, () -> new Block(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops().strength(2, 1.5F)));
-        FIRE_ELEMENT_ORE_ITEM = ITEMS.register(FIRE_ELEMENT_ORE_ID, () -> new BlockItem(FIRE_ELEMENT_ORE.get(), new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS)));
+        FIRE_ELEMENT_ITEM = ITEMS.register(FIRE_ELEMENT_ID,
+                () -> new Item(new Item.Properties().tab(CreativeModeTab.TAB_REDSTONE)));
+        FIRE_INGOT_ITEM = ITEMS.register(FIRE_INGOT_ID,
+                () -> new Item(new Item.Properties().tab(CreativeModeTab.TAB_REDSTONE)));
+        TAI_INGOT_ITEM = ITEMS.register(TAI_INGOT_ID,
+                () -> new Item(new Item.Properties().tab(CreativeModeTab.TAB_REDSTONE)));
+        OLD_TAI_INGOT_ITEM = ITEMS.register(OLD_TAI_INGOT_ID,
+                () -> new Item(new Item.Properties().tab(CreativeModeTab.TAB_REDSTONE)));
+        FIRE_ELEMENT_BLOCK = BLOCKS.register(FIRE_ELEMENT_BLOCK_ID,
+                () -> new Block(BlockBehaviour.Properties.of(Material.METAL).requiresCorrectToolForDrops().strength(3F, 1.5F)));
+        FIRE_ELEMENT_BLOCK_ITEM = ITEMS.register(FIRE_ELEMENT_BLOCK_ID,
+                () -> new BlockItem(FIRE_ELEMENT_BLOCK.get(), new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS)));
+        FIRE_ELEMENT_ORE = BLOCKS.register(FIRE_ELEMENT_ORE_ID,
+                () -> new Block(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops().strength(3F, 1.5F)));
+        FIRE_ELEMENT_ORE_ITEM = ITEMS.register(FIRE_ELEMENT_ORE_ID,
+                () -> new BlockItem(FIRE_ELEMENT_ORE.get(), new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS)));
+        FIRE_INGOT_BLOCK = BLOCKS.register(FIRE_INGOT_BLOCK_ID,
+                () -> new Block(BlockBehaviour.Properties.of(Material.METAL).requiresCorrectToolForDrops().strength(3F, 1.5F)));
+        FIRE_INGOT_BLOCK_ITEM = ITEMS.register(FIRE_INGOT_BLOCK_ID,
+                () -> new BlockItem(FIRE_INGOT_BLOCK.get(), new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS)));
+        TAI_INGOT_BLOCK = BLOCKS.register(TAI_INGOT_BLOCK_ID,
+                () -> new Block(BlockBehaviour.Properties.of(Material.METAL).requiresCorrectToolForDrops().strength(3F, 1.5F)));
+        TAI_INGOT_BLOCK_ITEM = ITEMS.register(TAI_INGOT_BLOCK_ID,
+                () -> new BlockItem(TAI_INGOT_BLOCK.get(), new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS)));
     }
 
     //public Fire_Power
@@ -76,6 +117,8 @@ public class Fire_Power {
         ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
         BLOCKS.register(FMLJavaModLoadingContext.get().getModEventBus());
     }
+
+
 
     //message part
     public static void onLoggedIn(PlayerEvent.PlayerLoggedInEvent event) {
@@ -106,6 +149,11 @@ public class Fire_Power {
             this.add(FIRE_ELEMENT_ITEM.get(), "Fire Element");
             this.add(FIRE_ELEMENT_BLOCK.get(), "Fire Element Block");
             this.add(FIRE_ELEMENT_ORE.get(), "Fire Element Ore");
+            this.add(FIRE_INGOT_ITEM.get(), "Fire Ingot");
+            this.add(TAI_INGOT_ITEM.get(), "'Tai' Ingot");
+            this.add(FIRE_INGOT_BLOCK.get(), "Fire Ingot Block");
+            this.add(TAI_INGOT_BLOCK.get(), "'Tai' Ingot Block");
+            this.add(OLD_TAI_INGOT_ITEM.get(), "'Tai' Ingot (Old)");
         }
     }
 
@@ -122,6 +170,11 @@ public class Fire_Power {
             this.add(FIRE_ELEMENT_ITEM.get(), "火元素");
             this.add(FIRE_ELEMENT_BLOCK.get(), "火元素块");
             this.add(FIRE_ELEMENT_ORE.get(), "火元素矿石");
+            this.add(FIRE_INGOT_ITEM.get(), "火锭");
+            this.add(TAI_INGOT_ITEM.get(), "钛金锭");
+            this.add(FIRE_INGOT_BLOCK.get(), "火锭块");
+            this.add(TAI_INGOT_BLOCK.get(), "钛金块");
+            this.add(OLD_TAI_INGOT_ITEM.get(), "钛金锭（已经废弃）");
         }
     }
 
@@ -133,6 +186,9 @@ public class Fire_Power {
         @Override
         protected void registerModels(){
             this.singleTexture(FIRE_ELEMENT_ID, new ResourceLocation("item/generated"), "layer0", new ResourceLocation("fire_power", "item/" + FIRE_ELEMENT_ID));
+            this.singleTexture(FIRE_INGOT_ID, new ResourceLocation("item/generated"), "layer0", new ResourceLocation("fire_power", "item/" + FIRE_INGOT_ID));
+            this.singleTexture(TAI_INGOT_ID, new ResourceLocation("item/generated"), "layer0", new ResourceLocation("fire_power", "item/" + TAI_INGOT_ID));
+            this.singleTexture(OLD_TAI_INGOT_ID, new ResourceLocation("item/generated"), "layer0", new ResourceLocation("fire_power", "item/" + OLD_TAI_INGOT_ID));
         }
     }
 
@@ -146,6 +202,10 @@ public class Fire_Power {
             this.simpleBlockItem(FIRE_ELEMENT_BLOCK.get(), this.cubeAll(FIRE_ELEMENT_BLOCK.get()));
             this.simpleBlock(FIRE_ELEMENT_ORE.get(), this.cubeAll(FIRE_ELEMENT_ORE.get()));
             this.simpleBlockItem(FIRE_ELEMENT_ORE.get(), this.cubeAll(FIRE_ELEMENT_ORE.get()));
+            this.simpleBlock(FIRE_INGOT_BLOCK.get(), this.cubeAll(FIRE_INGOT_BLOCK.get()));
+            this.simpleBlockItem(FIRE_INGOT_BLOCK.get(), this.cubeAll(FIRE_INGOT_BLOCK.get()));
+            this.simpleBlock(TAI_INGOT_BLOCK.get(), this.cubeAll(TAI_INGOT_BLOCK.get()));
+            this.simpleBlockItem(TAI_INGOT_BLOCK.get(), this.cubeAll(TAI_INGOT_BLOCK.get()));
         }
     }
 
@@ -170,7 +230,9 @@ public class Fire_Power {
         @Override
         protected void addTables() {
             this.add(FIRE_ELEMENT_BLOCK.get(), block -> createSingleItemTableWithSilkTouch(block, FIRE_ELEMENT_ITEM.get(), ConstantValue.exactly(9f)));
-            this.add(FIRE_ELEMENT_ORE.get(), block -> createSingleItemTableWithSilkTouch(block, FIRE_ELEMENT_ITEM.get(), ConstantValue.exactly(2f)));
+            this.dropSelf(FIRE_ELEMENT_ORE.get());
+            this.dropSelf(FIRE_INGOT_BLOCK.get());
+            this.dropSelf(TAI_INGOT_BLOCK.get());
         }
 
         @Nonnull
