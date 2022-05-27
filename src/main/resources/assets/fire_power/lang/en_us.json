@@ -1,0 +1,22 @@
+{
+  "block.fire_power.fire_element_block": "Fire Element Block",
+  "block.fire_power.fire_element_ore": "Fire Element Ore",
+  "block.fire_power.fire_ingot_block": "Fire Ingot Block",
+  "block.fire_power.tai_ingot_block": "'Tai' Ingot Block",
+  "chat.message.welcome": "Have a nice day!",
+  "item.fire_power.fire_element": "Fire Element",
+  "item.fire_power.fire_ingot": "Fire Ingot",
+  "item.fire_power.old_tai_ingot": "'Tai' Ingot (Easter Egg)",
+  "item.fire_power.tai_ingot": "'Tai' Ingot",
+  "item.fire_power.fire_ingot_sword": "Fire Ingot Sword",
+  "item.fire_power.fire_ingot_axe": "Fire Ingot Axe",
+  "item.fire_power.fire_ingot_pickaxe": "Fire Ingot Pickaxe",
+  "item.fire_power.fire_ingot_hoe": "Fire Ingot Hoe",
+  "item.fire_power.fire_ingot_shovel": "Fire Ingot Shovel",
+  "block.fire_power.tai_ingot_ore": "'Tai' Ingot Ore",
+  "item.fire_power.fire_bread": "Fire Bread",
+  "item.fire_power.fire_helmet": "Fire Helmet",
+  "item.fire_power.fire_chest": "Fire Chest",
+  "item.fire_power.fire_leggings": "Fire Leggings",
+  "item.fire_power.fire_boots": "Fire Boots"
+}

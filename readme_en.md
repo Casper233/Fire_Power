@@ -15,6 +15,11 @@ I'm now still keep working, and hope to make this mod playable with only this si
 
 #Updates
 
+2022-05-27-1
+Add 10+ items including fire_ingot's equipments
+Fixed the Bug( Can't Mine Any Blocks in Survival Mod)
+Rebuild almost everything
+
 2022-05-25-1
 Correct grammar in this readme
 Add 2 blocks(Tai Ingot Block and Fire Ingot Block) and 3 Items(Tai Ingot, Tai Ingot(Old) and Fire Ingot)
