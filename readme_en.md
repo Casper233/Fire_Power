@@ -15,9 +15,14 @@ I'm now still keep working, and hope to make this mod playable with only this si
 
 # Updates
 
-**2022-00-00-0**
+**2022-06-13-2**
+
+Fix the readme again and again
+
+**2022-06-13-1**
 
 Fix the readme again
+Make the dimension
 
 **2022-05-27-1**
 
