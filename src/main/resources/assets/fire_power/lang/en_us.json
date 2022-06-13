@@ -18,5 +18,10 @@
   "item.fire_power.fire_helmet": "Fire Helmet",
   "item.fire_power.fire_chest": "Fire Chest",
   "item.fire_power.fire_leggings": "Fire Leggings",
-  "item.fire_power.fire_boots": "Fire Boots"
+  "item.fire_power.fire_boots": "Fire Boots",
+  "entity.fire_power.firecracker": "Fire Cracker",
+  "item.fire_power.firecracker_spawn_egg": "Fire Cracker Spawn Egg",
+  "item.minecraft.potion.effect.burn_potion": "Fire Element Harmful Potion",
+  "item.minecraft.splash_potion.effect.burn_potion": "Splash Potion of Fire Element Harmful Potion",
+  "item.minecraft.lingering_potion.effect.burn_potion": "Lingering Potion of Fire Element Harmful Potion"
 }

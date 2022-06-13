@@ -1,0 +1,4 @@
+scoreboard objectives add fire_power_dimension_portal_activation_check minecraft.used:water_bucket
+scoreboard objectives add player_reach_range dummy
+scoreboard objectives add fire_portals_timer dummy
+scoreboard objectives add fire_portals_cooldown dummy

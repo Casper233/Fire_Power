@@ -1,7 +1,6 @@
 package com.Casper_233.Fire_Power;
 
-import com.Casper_233.Fire_Power.init.BlockInit;
-import com.Casper_233.Fire_Power.init.ItemInit;
+import com.Casper_233.Fire_Power.init.*;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.Block;
@@ -30,6 +29,12 @@ public class Fire_Power {
         //add items and blocks registration
         ItemInit.ITEMS.register(bus);
         BlockInit.BLOCKS.register(bus);
+        SoundInit.SOUNDS.register(bus);
+        EntityInit.ENTITY_TYPES.register(bus);
+        EffectInit.EFFECTS.register(bus);
+        PotionInit.POTIONS.register(bus);
+
+        DimensionInit.register();
 
         MinecraftForge.EVENT_BUS.register(this);
     }

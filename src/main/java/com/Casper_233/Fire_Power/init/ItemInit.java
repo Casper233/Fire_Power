@@ -10,6 +10,7 @@ import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.MobBucketItem;
+import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
@@ -75,4 +76,8 @@ public class ItemInit {
     public static final RegistryObject<Item> FIRE_BOOTS = ITEMS.register("fire_boots",
             () -> new ArmorItem(CustomArmorMaterial.ARMOR_MATERIAL_FIRESUIT, EquipmentSlot.FEET,
                     (new Item.Properties()).tab(Fire_Power.FIRE_POWER_TAB)));
+
+    public static final RegistryObject<Item> FIRECRACKER_SPAWN_EGG = ITEMS.register("firecracker_spawn_egg",
+            () -> new ForgeSpawnEggItem(EntityInit.FIRECRACKER, 9577503, 13423070, new Item.Properties().tab(Fire_Power.FIRE_POWER_TAB)));
+
 }

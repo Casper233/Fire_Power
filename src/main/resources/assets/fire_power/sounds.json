@@ -1,0 +1,67 @@
+{
+  "entity.fpg.ambient1": {
+    "category": "entity",
+    "subtitle": "entity.fpg.ambient1.sub",
+    "sounds": [
+      {
+
+      "name": "fire_power:entity/fpg/ambient1",
+      "stream": true
+      }
+    ]
+  },
+  "entity.fpg.ambient2": {
+    "category": "entity",
+    "subtitle": "entity.fpg.ambient2.sub",
+    "sounds": [
+      {
+        "name": "fire_power:entity/fpg/ambient1",
+        "stream": true
+      }
+    ]
+  },
+  "entity.fpg.death1": {
+    "category": "entity",
+    "subtitle": "entity.fpg.death1.sub",
+    "sounds": [
+      {
+
+        "name": "fire_power:entity/fpg/death1",
+        "stream": true
+      }
+    ]
+  },
+  "entity.fpg.death2": {
+    "category": "entity",
+    "subtitle": "entity.fpg.death2.sub",
+    "sounds": [
+      {
+
+        "name": "fire_power:entity/fpg/death2",
+        "stream": true
+      }
+    ]
+  },
+  "entity.fpg.hurt1": {
+    "category": "entity",
+    "subtitle": "entity.fpg.hurt1.sub",
+    "sounds": [
+      {
+
+        "name": "fire_power:entity/fpg/hurt1",
+        "stream": true
+      }
+    ]
+  },
+  "entity.fpg.hurt2": {
+    "category": "entity",
+    "subtitle": "entity.fpg.hurt2.sub",
+    "sounds": [
+      {
+
+        "name": "fire_power:entity/fpg/hurt2",
+        "stream": true
+      }
+    ]
+  }
+}

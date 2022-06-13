@@ -18,5 +18,10 @@
   "item.fire_power.fire_helmet": "\u706b\u952d\u5934\u76d4",
   "item.fire_power.fire_chest": "\u706b\u952d\u80f8\u7532",
   "item.fire_power.fire_leggings": "\u706b\u952d\u62a4\u817f",
-  "item.fire_power.fire_boots": "\u706b\u952d\u978b\u5b50"
+  "item.fire_power.fire_boots": "\u706b\u952d\u978b\u5b50",
+  "entity.fire_power.firecracker": "\u70ae\u7af9\u5b88\u536b\u8005",
+  "item.fire_power.firecracker_spawn_egg": "\u70ae\u7af9\u5b88\u536b\u8005\u5237\u602a\u86cb",
+  "item.minecraft.potion.effect.burn_potion": "\u706b\u4e4b\u4f24\u5bb3\u6027\u836f\u6c34",
+  "item.minecraft.splash_potion.effect.burn_potion": "\u706b\u4e4b\u4f24\u5bb3\u6027\u55b7\u6e85\u836f\u6c34",
+  "item.minecraft.lingering_potion.effect.burn_potion": "\u706b\u4e4b\u4f24\u5bb3\u6027\u6ede\u7559\u836f\u6c34"
 }

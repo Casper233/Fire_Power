@@ -1,0 +1,6 @@
+{
+  "condition": "minecraft:location_check",
+  "predicate": {
+    "dimension": "fire_power:fire_power_dimension"
+  }
+}
