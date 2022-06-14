@@ -13,18 +13,18 @@ import net.minecraftforge.fml.common.Mod;
 @Mod.EventBusSubscriber(modid = Fire_Power.MOD_ID, value = Dist.CLIENT, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class ClientModEventSubscriber {
 
-    //@SubscribeEvent
-    //public static void onRegisterLayers(EntityRenderersEvent.RegisterLayerDefinitions event){
-        //event.registerLayerDefinition(ModelFireCracker.LAYER_LOCATION, ModelFireCracker::createBodyLayer);
-    //}
+    @SubscribeEvent
+    public static void onRegisterLayers(EntityRenderersEvent.RegisterLayerDefinitions event){
+        event.registerLayerDefinition(ModelFireCracker.LAYER_LOCATION, ModelFireCracker::createBodyLayer);
+    }
 
-    //@SubscribeEvent
-    //public static void onRegisterRenderer(EntityRenderersEvent.RegisterRenderers event){
-        //event.registerEntityRenderer(EntityInit.FIRECRACKER.get(), RenderFireCracker::new);
-    //}
+    @SubscribeEvent
+    public static void onRegisterRenderer(EntityRenderersEvent.RegisterRenderers event){
+        event.registerEntityRenderer(EntityInit.FIRECRACKER.get(), RenderFireCracker::new);
+    }
 
-    //@SubscribeEvent
-    //public static void onAttributeCreate(EntityAttributeCreationEvent event){
-        //event.put(EntityInit.FIRECRACKER.get(), EntityFireCracker.prepareAttributes().build());
-    //}
+    @SubscribeEvent
+    public static void onAttributeCreate(EntityAttributeCreationEvent event){
+        event.put(EntityInit.FIRECRACKER.get(), EntityFireCracker.prepareAttributes().build());
+    }
 }

@@ -9,7 +9,7 @@ import net.minecraft.resources.ResourceLocation;
 
 public class RenderFireCracker extends MobRenderer<EntityFireCracker, ModelFireCracker<EntityFireCracker>> {
 
-    public static final ResourceLocation TEXTURE = new ResourceLocation(Fire_Power.MOD_ID, "textures/entity/firecracker");
+    public static final ResourceLocation TEXTURE = new ResourceLocation(Fire_Power.MOD_ID, "textures/entity/firecracker.png");
 
     public RenderFireCracker(EntityRendererProvider.Context manager){
         super(manager, new ModelFireCracker<>(manager.bakeLayer(ModelFireCracker.LAYER_LOCATION)), 0.7F);

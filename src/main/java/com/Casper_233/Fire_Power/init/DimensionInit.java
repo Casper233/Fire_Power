@@ -16,7 +16,7 @@ public class DimensionInit {
             (Registry.DIMENSION_TYPE_REGISTRY, FP_KEY.getRegistryName());
 
     public static void register() {
-        System.out.println("Registering Resident Fire Power Dimension oor" + Fire_Power.MOD_ID);
+        System.out.println("Registering Resident Fire Power Dimension for " + Fire_Power.MOD_ID);
     }
 
 }

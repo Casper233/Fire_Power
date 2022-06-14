@@ -67,12 +67,12 @@ public class EntityFireCracker extends Ravager {
 
     public static AttributeSupplier.Builder prepareAttributes() {
         return Monster.createMonsterAttributes().add(Attributes.MAX_HEALTH, 120.0D)
-                .add(Attributes.MOVEMENT_SPEED, 0.28D)
-                .add(Attributes.FOLLOW_RANGE, 50.0D)
+                .add(Attributes.MOVEMENT_SPEED, 0.58D)
+                .add(Attributes.FOLLOW_RANGE, 58.0D)
                 .add(Attributes.ARMOR, 8.0D)
                 .add(Attributes.ARMOR_TOUGHNESS, 10.0D)
-                .add(Attributes.KNOCKBACK_RESISTANCE, 0.85D)
-                .add(Attributes.ATTACK_DAMAGE, 9.0D);
+                .add(Attributes.KNOCKBACK_RESISTANCE, 1.25D)
+                .add(Attributes.ATTACK_DAMAGE, 15.0D);
     }
 
     @Override
@@ -81,6 +81,7 @@ public class EntityFireCracker extends Ravager {
         this.goalSelector.addGoal(1, new RandomLookAroundGoal(this));
         this.goalSelector.addGoal(2, new LookAtPlayerGoal(this, Player.class, 8.0F));
         this.targetSelector.addGoal(1, new NearestAttackableTargetGoal<>(this, LivingEntity.class, 0, false, false, LIVING_ENTITY_SELECTOR));
+        this.addBehaviourGoals();
     }
 
     protected void addBehaviourGoals() {
@@ -180,4 +181,5 @@ public class EntityFireCracker extends Ravager {
         super.stopSeenByPlayer(p_184203_1_);
         this.bossInfo.removePlayer(p_184203_1_);
     }
+
 }

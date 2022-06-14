@@ -1,5 +1,6 @@
 package com.Casper_233.Fire_Power;
 
+import com.Casper_233.Fire_Power.config.ModCommonConfig;
 import com.Casper_233.Fire_Power.init.*;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
@@ -8,7 +9,9 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 
 @Mod("fire_power")
@@ -33,6 +36,7 @@ public class Fire_Power {
         EntityInit.ENTITY_TYPES.register(bus);
         EffectInit.EFFECTS.register(bus);
         PotionInit.POTIONS.register(bus);
+        //ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, ModCommonConfig.SPEC, "fire_power_common.toml");
 
         DimensionInit.register();
 
