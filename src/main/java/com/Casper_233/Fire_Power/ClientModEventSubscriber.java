@@ -3,6 +3,7 @@ package com.Casper_233.Fire_Power;
 import com.Casper_233.Fire_Power.entity.EntityFireCracker;
 import com.Casper_233.Fire_Power.entity.model.ModelFireCracker;
 import com.Casper_233.Fire_Power.entity.render.RenderFireCracker;
+import com.Casper_233.Fire_Power.entity.render.RenderFire_bullet;
 import com.Casper_233.Fire_Power.init.EntityInit;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.EntityRenderersEvent;
@@ -21,6 +22,7 @@ public class ClientModEventSubscriber {
     @SubscribeEvent
     public static void onRegisterRenderer(EntityRenderersEvent.RegisterRenderers event){
         event.registerEntityRenderer(EntityInit.FIRECRACKER.get(), RenderFireCracker::new);
+        event.registerEntityRenderer(EntityInit.FIRE_BULLET.get(), RenderFire_bullet::new);
     }
 
     @SubscribeEvent

@@ -23,5 +23,10 @@
   "item.fire_power.firecracker_spawn_egg": "\u70ae\u7af9\u5b88\u536b\u8005\u5237\u602a\u86cb",
   "item.minecraft.potion.effect.burn_potion": "\u706b\u4e4b\u4f24\u5bb3\u6027\u836f\u6c34",
   "item.minecraft.splash_potion.effect.burn_potion": "\u706b\u4e4b\u4f24\u5bb3\u6027\u55b7\u6e85\u836f\u6c34",
-  "item.minecraft.lingering_potion.effect.burn_potion": "\u706b\u4e4b\u4f24\u5bb3\u6027\u6ede\u7559\u836f\u6c34"
+  "item.minecraft.lingering_potion.effect.burn_potion": "\u706b\u4e4b\u4f24\u5bb3\u6027\u6ede\u7559\u836f\u6c34",
+  "itemGroup.fire_power": "\u706b\u4e4b\u529b\uff08\u603b\u662f\u611f\u89c9\u6709\u70b9\u602a\u602a\u7684\uff09",
+  "item.fire_power.fire_gun": "\u706b\u4e4b\u67aa\u706b\u4e4b\u67aa",
+  "item.fire_power.fire_bullet": "\u706b\u4e4b\u5b50\u5f39",
+  "effect.fire_power.burn": "\u4f60\u7740\u4e86",
+  "block.fire_power.fire_element_flower": "\u706b\u4e4b\u82b1"
 }

@@ -1,7 +1,9 @@
 package com.Casper_233.Fire_Power.init;
 
 import com.Casper_233.Fire_Power.Fire_Power;
+import com.Casper_233.Fire_Power.blocks.fire_power_creater.Fire_Power_Creater_Block;
 import net.minecraft.world.item.BlockItem;
+import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
@@ -41,13 +43,22 @@ public class BlockInit {
                     MaterialColor.COLOR_PURPLE).strength(3.0f).sound(SoundType.METAL).requiresCorrectToolForDrops()),
             object -> () -> new BlockItem(object.get(), new Item.Properties().tab(Fire_Power.FIRE_POWER_TAB)));
 
-    private static <T extends Block> RegistryObject<T> registerBlock(final String name, final Supplier<? extends T> block){
+    public static final RegistryObject<Block> FIRE_ELEMENT_FLOWER = register("fire_element_flower", () -> new Block(BlockBehaviour.Properties.of(Material.GRASS,
+                    MaterialColor.COLOR_RED).strength(0.25f).sound(SoundType.GRASS)),
+            object -> () -> new BlockItem(object.get(), new Item.Properties().tab(Fire_Power.FIRE_POWER_TAB)));
+
+    public static final RegistryObject<Block> VIRUS_GENERATOR_BLOCK = registerBlock("fire_power_block",
+            () -> new Fire_Power_Creater_Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()),
+            Fire_Power.FIRE_POWER_TAB);
+
+
+    private static <T extends Block> RegistryObject<T> registerBlock(final String name, final Supplier<? extends T> block, CreativeModeTab firePowerTab){
         return BLOCKS.register(name, block);
     }
 
     private static <T extends Block> RegistryObject<T> register(final  String name, final Supplier<? extends T> block,
                                                                 Function<RegistryObject<T>, Supplier<? extends Item>> item) {
-        RegistryObject<T> obj = registerBlock(name, block);
+        RegistryObject<T> obj = registerBlock(name, block, Fire_Power.FIRE_POWER_TAB);
         ITEMS.register(name, item.apply(obj));
         return obj;
     }

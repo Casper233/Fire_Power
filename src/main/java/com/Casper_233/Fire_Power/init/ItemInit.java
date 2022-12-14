@@ -36,10 +36,19 @@ public class ItemInit {
                     effect(() -> new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 1000, 1, false, true), 1.0F)
                     .alwaysEat().alwaysEat().build())));
 
+    public static RegistryObject<Item> FIRE_BULLET = ITEMS.register("fire_bullet", () -> {
+        return new ItemFire_bullet();
+    });
+
 
     private static <T extends Item> RegistryObject<T> register(final String name, final Supplier<T> item) {
         return ITEMS.register(name, item);
     }
+
+    public static RegistryObject<Item> Fire_gun = ITEMS.register("fire_gun",()->
+    {
+        return new ItemFire_gun();
+    });
 
     public static RegistryObject<Item> Fire_Ingot_Sword = register("fire_ingot_sword", () -> {
         return new Fire_Ingot_Sword();
