@@ -10,13 +10,16 @@ so are still many bugs at this moment.
 # Explanation
 
 This mod need to be added both side, the client and the server.
-I'm now still keep working, and hope to make this mod playable with only this single mod.
 
 # Updates
 
+**2022-12-14-1**
+
+The last version, thanks to everyone who contribute to this project, and Good day.
+
 **2022-06-14-1**
 
-Update a boss that still have bug exist.
+Update a boss that still has bugs exist.
 
 **2022-06-13-2**
 
